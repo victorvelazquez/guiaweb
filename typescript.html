@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guía Web</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <span class="cabecera-titulo"><a href="index.html"><span class="icon-inicio inicio"></span>Guía de Desarrollo Web</a></span>
+            <div class="cabecera-perfil">
+                <div class="cabecera-perfil-img">
+                    <img src="img/victor.jpg" alt="Victor Velázquez">
+                </div>
+                <div class="cabecera-perfil-texto">
+                    <div class="cabecera-perfil-texto-nombre1">Victor Velázquez</div>
+                    <div class="cabecera-perfil-texto-nombre2">Lic. en Análisis de Sistemas</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contenedor">
+        <nav>
+            <h1 class="nav-titulo">TypeScript</h1>
+            <div class="nav-img">
+                <img src="img/TypeScript.png" alt="TypeScript">
+            </div>
+            <ul>
+                <a href="#1">
+                    <li>1. ¿Qué es TypeScript?</li>
+                </a>
+                <a href="#2">
+                    <li>2. Instalando TypeScript</li>
+                </a>
+                <a href="#3">
+                    <li>3. Archivo TypeScript</li>
+                </a>
+                <a href="#4">
+                    <li>4. Compilando tu código</li>
+                </a>
+                <a href="#5">
+                    <li>5. Variables y tipos de datos</li>
+                </a>
+                <a href="#6">
+                    <li>6. Arreglos</li>
+                </a>
+                <a href="#7">
+                    <li>7. Enumerables</li>
+                </a>
+                <a href="#8">
+                    <li>8. Funciones</li>
+                </a>
+                <a href="#9">
+                    <li>9. Estructuras iterativas</li>
+                </a>
+                <a href="#10">
+                    <li>10. Clases</li>
+                </a>
+                <a href="#11">
+                    <li>11. Herencia</li>
+                </a>
+                <a href="#12">
+                    <li>12. Interfaces</li>
+                </a>
+                <a href="#13">
+                    <li>13. Modulos</li>
+                </a>
+                
+
+            </ul>
+        </nav>
+        <section>
+            <div class="seccion">
+                <br>
+                <div class="seccion-img">
+                    <img src="img/TypeScript.png" alt="TypeScript">
+                </div>
+                
+                <h2 id="1">1. ¿Qué es TypeScript?</h2>
+                <p>Es un lenguaje de programación libre y de código abierto desarrollado por Microsoft. 
+                    Es un superconjunto de JavaScript, que esencialmente añade tipado estático y programación orientada a objetos, 
+                    muy favorable si se tienen proyectos grandes.</p>
+                <p>Además, la sintaxis y desarrollo en TypeScript incorpora las mejoras y características de ECMAScript 6, estandarización de
+                JavaScript.</p>
+                <p>Debido a estas nuevas especificaciones, el framework Angular utiliza TypeScript como lenguaje de programación para la lógica
+                de las aplicaciones. Como las características de ECMAScript 6 aún no son soportadas por los navegadores web, el propio framework
+                Angular ‘transpila’ el código TypeScript directamente a JavaScript para que pueda ser interpretado en los clientes web.</p>
+                
+                <h2 id="2">2. Instalando TypeScript</h2>
+                <p>Para poder usar TypeScript necesitamos tener instalado previamente Node.js, y después 
+                    en nuestra terminal ejecutar el comando:</p>
+                <div class="terminal">npm install -g typescript</div>
+                <p>Para comprobar la correcta instalación o la versión de TypeScript en el caso de que ya estuviera instalado, completamos en
+                la consola:</p>
+                <div class="terminal">tsc -v</div>
+                <p>Que nos devolverá la versión instalada y así tendremos nuestro equipo listo para trabajar.</p>
+                
+                <h2 id="3">3. Archivo TypeScript</h2>
+                <p>Usando tu editor de texto favorito crea un archivo de TypeScript 
+                    llamado <strong>persona.ts</strong> recordando que la extensión es <strong>.ts</strong>.</p>
+                <p>Escribe el siguiente código JavaScript en el archivo.</p>
+                <div class="terminal">
+                    console.log("Hola mundo!");
+                </div>
+
+                <h2 id="4">4. Compilando tu código</h2>
+                <p>Usamos una extensión <strong>.ts</strong>, pero este código es solo JavaScript normal, 
+                    en los siguientes ejemplos ya veremos código TypeScript.</p>
+                <p>En la terminal de comando, ejecute el compilador de TypeScript:</p>
+                <div class="terminal">tsc persona.ts</div>
+        
+                <h2 id="5">5. Variables y tipos de datos</h2>
+                <p>Las variables tienen la palabra reservada <strong>let</strong> o <strong>var</strong>, 
+                    y el tipo de dato se especifica usando <strong>:tipo</strong>. Ejemplo:</p>
+                <div class="terminal">
+                    let nombre:string = "Julio";<br>
+                    let edad:number = 27;<br>
+                    let developer:boolean = true;<br>
+                </div>
+                <p>Además de los tipos <strong>string</strong>, <strong>number</strong> y <strong>boolean</strong>, TypeScript también 
+                    admite los siguientes tipos básicos:</p>
+                <ul>
+                    <li><strong>array</strong>: tipo de dato estructurado que permite almacenar una colección de elementos.</li>
+                    <li><strong>tuple</strong>: similar al array, pero con un número fijo de elementos escritos.</li>
+                    <li><strong>enum</strong>: representa al tipo enumeración. Una enumeración es una forma de dar nombres 
+                        descriptivos a los conjuntos de valoresnuméricos.</li>
+                    <li><strong>any</strong>: indica que la variable puede ser de cualquier tipo. Es muy útil a la hora de 
+                        trabajar con librerías externas.</li>
+                    <li><strong>void</strong>: indica que una función no devolverá ningún valor.</li>
+                    <li><strong>never</strong>: este tipo representa el tipo de valores que nunca se producen. Por ejemplo 
+                        para indicar que una función siempre arrojauna excepción o que nunca termina su ejecución.</li>
+                </ul>
+                <p>Poder definir los tipos durante el tiempo de diseño nos ayuda a evitar errores en tiempo 
+                    de ejecución, como podría ser pasar el tipo de variable incorrecto a una función.</p>
+                <p>Ahora la diferencia entre una variable let y var: <strong>let</strong> permite declarar 
+                    variables limitando su alcance al bloque, declaración, o expresión donde se está usando y 
+                    <strong>var</strong> define una variable global o local en una función sin importar el 
+                    ámbito del bloque.</p>
+                    <p>Veamos otro ejemplo muy claro del uso de let y var:</p>
+                <div class="terminal">
+                    var a = 5;<br>
+                    var b = 10;<br>
+                    if (a === 5) {<br>
+                        &nbsp;&nbsp;let a = 4; // El alcance es dentro del bloque if<br>
+                        &nbsp;&nbsp;var b = 1; // El alcance es dentro de la función<br>
+                        &nbsp;&nbsp;console.log(a); // 4<br>
+                        &nbsp;&nbsp;console.log(b); // 1<br>
+                    }<br>
+                    console.log(a); // 5<br>
+                    console.log(b); // 1
+                </div>
+
+                <h2 id="6">6. Arreglos</h2>
+                <p>Los arreglos se declaran con :tipo[]. Donde el tipo son los valores primitivos que vimos anteriormente. Recuerda que solo pueden existir en el Array valores
+                    del tipo antes especificado. Ejemplo:</p>
+                <div class="terminal">var numeroArray:number[] = [123,123,1213,1231];</div>
+
+                <h2 id="7">7. Enumerables</h2>
+                <p>Los Enumerables son objetos que enumeran los elementos dentro de él. Se usa principalmente para definir roles o configuraciones
+                y evitar el uso de constantes. Tienen la palabra reservada enum y para el nombre es recomendable que se encuentre todo en
+                mayúscula. Ejemplo:</p>
+                <div class="terminal">
+                    enum ROLE {Employee, Manager, Admin, Developer }
+                </div>
+                <p>Entonces podemos asignarle un valor de Role a cualquier variable:</p>
+                <div class="terminal">
+                    var role:Role = Role.Employee
+                </div>
+
+                <h2 id="8">8. Funciones</h2>
+                <p>Las funciones son bloques de código que esperamos ejecutar de manera recurrente. Tienen la palabra reservada function y tenemos
+                múltiples formas de declararlas según las necesidades, por ejemplo:</p>
+                <p>a) Función que no retorne nada y que no reciba parametros:</p>
+                <div class="terminal">
+                    functionhello():void { <br>
+                    }
+                </div>
+                <p>b) Función que no retorne nada y que reciba un parámetro del tipo string:</p>
+                <div class="terminal">
+                    functionsetName(name:string):void{ <br>
+                    }
+                </div>
+                <p>c) Función que retorne un dato tipo string y que reciba 2 parámetros del tipo string:</p>
+                <div class="terminal">
+                    functionsetName(name:string, surName:string ):string { <br>
+                    &nbsp;&nbsp;return"string"; <br>
+                    }
+                </div>
+
+
+
+                <h2 id="9">9. Estructuras iterativas</h2>
+                <p>En typescript podemos hacer uso de dos tipos de bucles diferentes <strong>for … in</strong> 
+                    y <strong>for .. of</strong>. For… in proviene de versiones antiguas de javascript el cual 
+                    nos permite recorrer objetos iterables obteniendo sus indices. En cambio, For…of es una 
+                    caracteristica introducida en ES6, la cual nos permite recorrer colecciones obteniendo su 
+                    valor, veamos las diferencias con un ejemplo:</p>
+                <div class="terminal">
+                    let list = [4, 5, 6];<br>
+                    for (let i in list) {<br>
+                    &nbsp;&nbsp;console.log(i); // "0", "1", "2" <br>
+                    }<br>
+                    <br>
+                    for (let i of list) { <br>
+                    &nbsp;&nbsp;console.log(i); //"4", "5", "6" <br>
+                    }
+                </div>
+
+                <h2 id="10">10. Clases</h2>
+                <p>Las clases en typescript son cómo en cualquier otro lenguaje de programación, tienen propiedades, 
+                    constructor, los métodos pueden devolver tipos o nada (void), existe herencia, super, pueden 
+                    implementar interfaces y todo lo que necesitamos para crear clases de verdad, eso es lo que es 
+                    realmente typescript, herramientas que todos los desarrolladores han simulado durante mucho 
+                    tiempo utilizando javascript.</p>
+                <div class="terminal">
+                    class Persona {<br>
+                    &nbsp;&nbsp;public nombre : string; &nbsp;//atributo accesible desde fuera de la clase<br>
+                    &nbsp;&nbsp;protected edad: number; &nbsp;//atributos accesible desde clases que hereden de Persona<br>
+                    &nbsp;&nbsp;private developer: boolean; &nbsp;//accesible solo dentro de la clase Persona<br>
+                    <br>
+                    &nbsp;&nbsp;constructor(nombre:string, edad:number, developer:boolean){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.nombre = nombre; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.edad = edad; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.developer = developer; <br>
+                    &nbsp;&nbsp;} <br>
+                    <br>
+                    &nbsp;&nbsp;getNombre(){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return this.nombre; <br>
+                    &nbsp;&nbsp;} <br>
+                    <br>
+                    &nbsp;&nbsp;setNombre(nombre:string){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.nombre = nombre; <br>
+                    &nbsp;&nbsp;} <br>
+                    <br>
+                    &nbsp;&nbsp;getEdad(){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return this.edad; <br>
+                    &nbsp;&nbsp;} <br>
+                    <br>
+                    &nbsp;&nbsp;setEdad(edad:number){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.edad = edad; <br>
+                    &nbsp;&nbsp;} <br>
+                    <br>
+                    &nbsp;&nbsp;getDeveloper(){ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return this.developer; <br>
+                    &nbsp;&nbsp;}
+                    <br>
+                    <br> &nbsp;&nbsp;setDeveloper(developer:boolean){
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;this.developer = developer;
+                    <br> &nbsp;&nbsp;}
+                    <br>
+                    }
+                </div>
+
+                <h2 id="11">11. Herencia</h2>
+                <p>Otro elemento fundamental en la POO es la herencia, la cual nos permite extender 
+                    la funcionalidad nuestra clase herendando de una clase padre. La clase hija hereda 
+                    todos los miembros de su clase base y puede sobreescribir todos aquellos métodos y/o 
+                    propiedades públicos o protegidos.</p>
+                <div class="terminal">
+                    class Usuario extends Persona {<br>
+                    &nbsp;&nbsp;constructor(nombre:string, edad:number, developer:boolean){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;super(nombre,edad,developer);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;this.edad = 24;<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </div>
+
+                <h2 id="12">12. Interfaces</h2>
+                <p>Las interfaces en typescript nos permiten crear contratos que otras clases deben firmar para poder utilizarlos, al igual
+                que en otros lenguajes de programación como java o php, en typescript también podemos implementar más de una interfaz en
+                la misma clase.</p>
+                <div class="terminal">
+                    interface ICar{ <br>
+                    &nbsp;&nbsp;engine: string; <br>
+                    &nbsp;&nbsp;color: string; <br>
+                    <br>
+                    &nbsp;&nbsp;brake: () => void; <br>
+                    } <br>
+                    <br>
+                    class Car implements ICar { <br>
+                    &nbsp;&nbsp;constructor (public engine: string, public color: string) { } <br>
+                    }
+                </div>
+
+                <h2 id="13">13. Modulos</h2>
+                <p>Los módulos en typescript nos permiten agrupar alguna lógica en trozos de código para que sean exportados y utilizados donde
+                y cuando necesitemos, es un forma de crear aplicaciones escalables con cierto orden y un código fácil de mantener.</p>
+                <p>Como ejemplo si quisieramos exportar el tipo Ranking y la función printRankings(), tan solo tendríamos que añadirle la palabra reservada
+                export antes de la definición de los mismos:</p>
+                <div class="terminal">
+                    export type RankingTuple = [number, string, boolean]; <br>
+                    <br>
+                    export function printRankings(rankings: Array<RankingTuple>): void { <br>
+                    &nbsp;&nbsp;for (let ranking of rankings) { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log(ranking); <br>
+                    &nbsp;&nbsp;} <br>
+                    }
+                </div>
+                <p>Para importarlos en otro fichero tan solo nos bastaría con lo siguiente:</p>
+                <div class="terminal">
+                    import {RankingTuple, printRankings} from './myRankingModule.ts';
+                </div>
+
+
+
+
+
+
+
+
+                
+            <br>
+            </div>
+            <div class="foo">
+                <div class="foo-perfil">
+                    <div class="foo-perfil-img">
+                        <img src="img/victor.jpg" alt="Victor Velázquez">
+                    </div>
+                </div>
+                <div class="foo-perfil-sub">
+                    <div class="foo-perfil-nombre">Victor Velázquez</div>
+                    <div>Lic. en Análisis de Sistemas</div>
+                    <div>Desarrollador Web</div>
+                </div>
+                <div class="foo-perfil-sociales">
+                    <a href="https://twitter.com/vict_velazquez" target="_blank">
+                        <span class="icon-twitter icono-twitter"></span>
+                    </a>
+                    <a href="https://github.com/victorvelazquez" target="_blank">
+                        <span class="icon-github icono-github"></span>
+                    </a>
+                    <a href="https://www.youtube.com/c/VictorVelazquez-mipc" target="_blank">
+                        <span class="icon-youtube icono-youtube"></span>
+                    </a>
+                    <a href="https://wa.me/595972174652" target="_blank">
+                        <span class="icon-whatsapp icono-whatsapp"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>

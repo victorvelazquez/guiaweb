@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('opentype');
+}
+
+/* colores #14171a #aab8c2 #e1e8ed #f5f8fa */
+body {
+    margin: 0;
+    font-family: 'Roboto', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .3px;
+    font-weight: 400;
+    color: #14171a;
+}
+
+.cabecera {
+    background-color: #14171a;
+    color: #f5f8fa;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+}
+
+.inicio {
+    padding: 0 10px;
+}
+
+.cabecera-titulo {
+    font-size: 24px;
+    display: grid;
+    height: 60px;
+    justify-content: start;
+    align-content: center;
+    grid-template-columns: auto auto;
+}
+
+.cabecera-titulo a {
+    color: #f5f8fa;
+}
+
+.cabecera-perfil {
+    display: none;
+}
+
+.cabecera-perfil-img {
+    margin-top: 3px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cabecera-perfil-texto {
+    display: grid;
+    height: 60px;
+    align-content: center;
+    margin: 0 5px;
+}
+
+.cabecera-perfil-texto-nombre1 {
+    height: 20px;
+    vertical-align: bottom;
+}
+.cabecera-perfil-texto-nombre2 {
+    font-size: 14px;
+    color: #aab8c2;
+    height: 18px;
+    vertical-align: top;
+}
+
+.contenedor {
+    display: grid;
+}
+
+.nav-titulo {
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.seccion {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.seccion-img{
+    display: none;
+}
+
+img {
+    width: 100%
+}
+
+h1, h2 {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 2em 0 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: #14171a;
+}
+
+.terminal {
+    background-color: #14171a;
+    color: #f5f8fa;
+    border: 1px solid #14171a;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #14171a;
+    color: #f5f8fa;
+}
+
+.sombra {
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+.foo {
+    box-shadow: 1px 1px 15px #aab8c2;
+    padding: 0 5%;
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    align-content: start;
+    justify-content: center;
+    background-color: white;
+}
+
+.foo-perfil {
+    padding: 0 20px;
+    display: grid;
+    justify-content: center;
+}
+
+.foo-perfil-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px 0 10px 0;
+}
+
+.foo-perfil-nombre {
+    font-size: 24px;
+    text-align: center;
+}
+
+.foo-perfil-sub {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.foo-perfil-sociales {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    font-size: 30px;
+    margin: 10px 0 20px 0;
+}
+
+.icono-twitter {
+    color: #1da1f2;
+}
+
+.icono-youtube {
+    color: #ff0000;
+}
+
+.icono-whatsapp {
+    color: #25d366;
+}
+
+
+/*  Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) and (max-width: 767.98px) {
+
+} */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) and (max-width: 991.98px) { */
+@media (min-width: 768px) {
+
+    .cabecera {
+        justify-content: space-between;
+        grid-template-columns: auto auto;
+    }
+
+    .cabecera-perfil {
+        height: 60px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: end;
+        align-content: center;
+    }
+
+    .foo {
+        grid-template-columns: auto auto;
+    }
+
+    .foo-perfil-sub {
+        text-align: left;
+    }
+
+    .foo-perfil-sociales {
+        grid-area: 2 / 1 / 3 / 3;
+        width: 200px;
+        margin: 10px auto 20px auto;
+    }
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+/*@media (min-width: 992px) and (max-width: 1199.98px) {*/
+@media (min-width: 992px) {
+
+    .contenedor {
+        grid-template-columns: 300px auto;
+    }
+
+    nav {
+        box-shadow: 1px 1px 15px #aab8c2;
+        display: inline-block;
+        padding: 0 25px;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .nav-titulo {
+        display: inline-block;
+    }
+
+    .nav-img {
+        display: none;
+    }
+
+    section {
+        padding: 0 0;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .seccion {
+        width: 80%;
+    }
+
+    .seccion-img{
+        display: inline-block;
+    }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

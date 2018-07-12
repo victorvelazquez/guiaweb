@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guía Web</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <span class="cabecera-titulo"><a href="index.html"><span class="icon-inicio inicio"></span>Guía de Desarrollo Web</a></span>
+            <div class="cabecera-perfil">
+                <div class="cabecera-perfil-img">
+                    <img src="img/victor.jpg" alt="Victor Velázquez">
+                </div>
+                <div class="cabecera-perfil-texto">
+                    <div class="cabecera-perfil-texto-nombre1">Victor Velázquez</div>
+                    <div class="cabecera-perfil-texto-nombre2">Lic. en Análisis de Sistemas</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contenedor">
+        <nav>
+            <h1 class="nav-titulo">Angular</h1>
+            <div class="nav-img">
+                <img src="img/angular.png" alt="TypeScript">
+            </div>
+            <ul>
+                <a href="#1">
+                    <li>1. ¿Qué es Angular?</li>
+                </a>
+                <a href="#2">
+                    <li>2. Versiones de Angular</li>
+                </a>
+                <a href="#3">
+                    <li>3. Aplicación web SPA</li>
+                </a>
+                <a href="#4">
+                    <li>4. Entorno de desarrollo</li>
+                </a>
+                <a href="#5">
+                    <li>5. Crea un nuevo proyecto</li>
+                </a>
+                <a href="#6">
+                    <li>6. Correr la aplicación</li>
+                </a>
+                <a href="#7">
+                    <li>7. Archivos y carpetas</li>
+                </a>
+
+                
+
+            </ul>
+        </nav>
+        <section>
+            <div class="seccion">
+                <br>
+                <div class="seccion-img">
+                    <img src="img/angular.png" alt="Angular">
+                </div>
+                
+                <h2 id="1">1. ¿Qué es Angular?</h2>
+                <p>Angular es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza
+                para crear y mantener aplicaciones web SPA y además darnos herramientas para trabajar con los elementos de una web de una manera más sencilla
+                y optima.</p>
+
+                <h2 id="2">2. Versiones de Angular</h2>
+                <ul>
+                    <li><strong>AngularJS</strong>: Versión inicial del framework</li>
+                    <li><strong>Angular 2</strong>: Revisión completa del framework</li>
+                    <li><strong>Angular 4</strong>: Primer update mayor de Angular 2</li>
+                    <li><strong>Angular 5</strong>: Seis meses de diferencia y algunos cambios que seguro romperán sus aplicaciones.</li>
+                    <li><strong>Angular 6</strong>: Principalmente se actualizaron el core para mejor rendimiento a la hora de compilacion y ejecucion.</li>
+                </ul>
+                <p><strong>Qué pasó con Angular 3?</strong> <br>
+                    Igor Minar, líder del equipo de Angular en Google, explicó que se saltó de la versión 2 a la 4 
+                    para alinear la versión de Angular Router (3.3.0) con la del resto de los módulos (2.3.0)
+                </p>
+
+                <h2 id="3">3. ¿Que es una aplicación web SPA desarrollada con Angular?</h2>
+                <p>Una aplicación web SPA creada con Angular es una web de una sola página, en la cual la navegación entre secciones y páginas
+                de la aplicación, así como la carga de datos, se realiza de manera dinámica, casi instantánea, asincronamente haciendo llamadas
+                al servidor (backend con un API REST) y sobre todo sin refrescar la página en ningún momento.</p>
+                <p>Es decir las aplicaciones web que podemos hacer con Angular son reactivas y no recargan el navegador, todo es muy dinámico
+                y asíncrono con ajax.</p>
+
+                <h2 id="4">4. Entorno de desarrollo</h2>
+                <p>Necesita configurar su entorno de desarrollo antes de poder hacer cualquier cosa.</p>
+                <p>Instale Node.js® y npm si aún no están en su máquina.</p>
+                <p>Verifique que esté ejecutando al menos Node.js versión 8.x o superior y npm versión 5.x o superior ejecutando node -v y npm
+                -v en una ventana de terminal. Las versiones anteriores producen errores, pero las versiones más recientes están
+                bien.</p>
+                <p>Luego, instale Angular CLI globalmente.</p>
+                <div class="terminal">npm install -g @angular/cli</div>
+
+                <h2 id="5">5. Crea un nuevo proyecto</h2>
+                <p>Genere un nuevo proyecto y una aplicación predeterminada ejecutando el siguiente comando en la terminal:</p>
+                <div class="terminal">ng new my-app</div>
+                <p>Angular CLI instala los paquetes npm necesarios, crea los archivos del proyecto y rellena el proyecto con una aplicación
+                predeterminada simple. Esto puede llevar algo de tiempo.</p>
+
+                <h2 id="6">6. Correr la aplicación</h2>
+                <p>Ve al directorio del proyecto y ejecuta el servidor.</p>
+                <div class="terminal">
+                    cd my-app <br>
+                    ng serve --open
+                </div>
+                <p>El comando ng serve inicia el servidor, mira tus archivos y reconstruye la aplicación a medida que realizas cambios en esos
+                archivos.</p>
+                <p>El uso de la opción --open (o solo -o) abrirá automáticamente su navegador en http: // localhost: 4200 /.</p>
+                <p>Tu aplicación te saluda con un mensaje:</p>
+                <div>
+                    <img class="sombra" style="max-width: 297px; display: block; margin: 0 auto;" src="img/angular-welcome.png" alt="Angular">
+                </div>
+
+                <h2 id="7">7. Archivos y carpetas</h2>
+                
+                <p><strong>Carpeta src</strong>
+                    <br> Tu aplicación vive en la carpeta src. Todos los componentes angulares, plantillas, estilos, imágenes y cualquier
+                    otra cosa que necesite su aplicación van aquí. Cualquier archivo fuera de esta carpeta está destinado a ayudar
+                    a construir su aplicación.</p>
+                <p>IMAGEN DE LA CARPETA SRC</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Archivo</th><th>Propósito</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>app/app.component.{ts,html,css,spec.ts}</td><td>Define el AppComponent junto con una plantilla HTML, una hoja de estilos CSS y una prueba unitaria. Es el componente raíz
+                            de lo que se convertirá en un árbol de componentes anidados a medida que la aplicación evoluciona.</td>
+                        </tr>
+                        <tr>
+                            <td>app/app.module.ts</td>
+                            <td>Define AppModule, el módulo raíz que le dice a Angular cómo armar la aplicación. En este momento declara solo el AppComponent.
+                            Pronto habrá más componentes para declarar.</td>
+                        </tr>
+                        <tr>
+                            <td>assets/*</td>
+                            <td>Una carpeta donde puedes poner imágenes y todo lo demás para copiar al por mayor cuando construyes tu aplicación.</td>
+                        </tr>
+                        <tr>
+                            <td>environments/*</td>
+                            <td>Esta carpeta contiene un archivo para cada uno de sus entornos de destino, cada uno exportando variables de configuración
+                            simples para usar en su aplicación. Los archivos se reemplazan sobre la marcha cuando construyes tu aplicación.</td>
+                        </tr>
+                        <tr>
+                            <td>browserslist</td>
+                            <td>Un archivo de configuración para compartir navegadores de destino entre diferentes herramientas de front-end.</td>
+                        </tr>
+                        <tr>
+                            <td>favicon.ico</td>
+                            <td>Todos los sitios quieren verse bien en la barra de marcadores. Comience con su propio ícono angular.</td>
+                        </tr>
+                        <tr>
+                            <td>index.html</td>
+                            <td>La página HTML principal que se sirve cuando alguien visita su sitio. La mayoría de las veces, nunca necesitarás editarlo. La CLI agrega automáticamente todos los archivos js y css al compilar su aplicación para que nunca tenga que agregar manualmente
+                            ninguna etiqueta
+                                &lt;script> o &lt;link>.</td>
+                        </tr>
+                        <tr>
+                            <td>karma.conf.js</td>
+                            <td>Configuración de prueba unitaria para el corrector de prueba Karma, que se usa al ejecutar ng test.</td>
+                        </tr>
+                        <tr>
+                            <td>main.ts</td>
+                            <td>El principal punto de entrada para tu aplicación. Compila la aplicación con el compilador JIT y arranca el módulo raíz de
+                            la aplicación (AppModule) para que se ejecute en el navegador. También puede usar el compilador AOT sin cambiar ningún código agregando el indicador --aot a los comandos ng build y ng
+                            serve.</td>
+                        </tr>
+                        <tr>
+                            <td>polyfills.ts</td>
+                            <td>Los diferentes navegadores tienen diferentes niveles de compatibilidad con los estándares web. Los polyfills ayudan a normalizar
+                            esas diferencias.</td>
+                        </tr>
+                        <tr>
+                            <td>styles.css</td>
+                            <td>Tus estilos globales van aquí. La mayoría de las veces querrá tener estilos locales en sus componentes para facilitar el
+                            mantenimiento, pero los estilos que afectan a toda su aplicación deben estar en un lugar central.</td>
+                        </tr>
+                        <tr>
+                            <td>test.ts</td>
+                            <td>Este es el principal punto de entrada para las pruebas de su unidad. Tiene una configuración personalizada que puede ser
+                            desconocida, pero no es algo que deba editar.</td>
+                        </tr>
+                        <tr>
+                            <td>tsconfig.{app|spec}.json</td>
+                            <td>Configuración del compilador de TypeScript para la aplicación Angular (tsconfig.app.json) y para las pruebas unitarias (tsconfig.spec.json).</td>
+                        </tr>
+                        <tr>
+                            <td>tslint.json</td>
+                            <td>Configuración adicional de Linting para TSLint junto con Codelyzer, utilizada al ejecutar ng lint. Linting ayuda
+                            a mantener un estilo de código consistente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>La carpeta raíz</strong>
+                    <br>La carpeta src/ es solo uno de los elementos dentro de la carpeta raíz del proyecto. Otros archivos lo ayudan a construir,
+                    probar, mantener, documentar y desplegar la aplicación. Estos archivos van en la carpeta raíz al lado de src/.
+                </p>
+                <p>IMAGEN DE LA CARPETA RAÍZ</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Archivo</th>
+                            <th>Propósito</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>e2e/</td>
+                            <td>Dentro de e2e/ vive el end-to-end tests. No deberían estar dentro de src/ porque las pruebas de e2e son realmente una
+                            aplicación separada que da la casualidad de que prueban tu aplicación principal. Por eso también tienen su propio tsconfig.e2e.json.</td>
+                        </tr>
+                        <tr>
+                            <td>node_modules/</td>
+                            <td>Node.js crea esta carpeta y coloca todos los módulos de terceros enumerados en package.json dentro de ella.</td>
+                        </tr>
+                        <tr>
+                            <td>.editorconfig</td>
+                            <td>Configuración simple para su editor para asegurarse de que todos los que usan su proyecto tengan la misma configuración básica.
+                            La mayoría de los editores admiten un archivo .editorconfig. Vea <a href="http://editorconfig.org" target="_blank">http://editorconfig.org</a> para más información.</td>
+                        </tr>
+                        <tr>
+                            <td>.gitignore</td>
+                            <td>Configuración de Git para garantizar que los archivos autogenerados no estén comprometidos con el control de origen.</td>
+                        </tr>
+                        <tr>
+                            <td>angular.json</td>
+                            <td>Configuración para CLI angular. En este archivo puede establecer varios valores predeterminados y también configurar qué
+                            archivos se incluyen cuando se construye su proyecto.</td>
+                        </tr>
+                        <tr>
+                            <td>package.json</td>
+                            <td>Configuración de npm que enumera los paquetes de terceros que utiliza su proyecto. También puede agregar sus propios scripts
+                            personalizados aquí.</td>
+                        </tr>
+                        <tr>
+                            <td>protractor.conf.js</td>
+                            <td>Configuración de prueba de extremo a extremo para transportador, utilizada al ejecutar ng e2e.</td>
+                        </tr>
+                        <tr>
+                            <td>README.md</td>
+                            <td>Documentación básica para su proyecto, precompletada con información del comando CLI. ¡Asegúrese de mejorarlo con la documentación
+                            del proyecto para que cualquier persona que revise el repositorio pueda construir su aplicación!</td>
+                        </tr>
+                        <tr>
+                            <td>tsconfig.json</td>
+                            <td>Configuración del compilador de TypeScript para que su IDE recoja y le proporcione herramientas útiles.</td>
+                        </tr>
+                        <tr>
+                            <td>tslint.json</td>
+                            <td>Configuración de Linting para TSLint junto con Codelyzer, utilizado al ejecutar ng lint. Linting ayuda a mantener
+                            un estilo de código consistente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><strong>El index.html</strong>
+                <br>El index.html hace de raíz del proyecto. Es interesante que abras ese archivo para comprobar cómo es la raíz de una aplicación Angular. Te debería llamar
+                    la atención el código que encontrarás en el body:</p>
+                <div class="terminal">
+                    <span>&lt;</span>app-root<span>>&lt;/</span>app-root<span>></span>
+                </div>
+                <p>Ese "app-root" es el componente raíz de la aplicación. En el desarrollo basado en componentes es un patrón normal que toda
+                la aplicación se construya en un componente principal, del que colgará todo un árbol de componentes especializados en hacer
+                cada una de las cosas necesarias.</p>
+                        
+                
+
+
+                
+                
+                
+                
+
+
+
+
+
+
+
+
+
+
+        
+            
+                <!-- <div class="terminal">
+                    var a = 5;<br>
+                    var b = 10;<br>
+                    if (a === 5) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;let a = 4; // El alcance es dentro del bloque if<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var b = 1; // El alcance es dentro de la función<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(a); // 4<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log(b); // 1<br>
+                    }<br>
+                    console.log(a); // 5<br>
+                    console.log(b); // 1
+                </div> -->
+
+
+
+
+
+
+                
+                <br>
+            </div>
+            <div class="foo">
+                <div class="foo-perfil">
+                    <div class="foo-perfil-img">
+                        <img src="img/victor.jpg" alt="Victor Velázquez">
+                    </div>
+                </div>
+                <div class="foo-perfil-sub">
+                    <div class="foo-perfil-nombre">Victor Velázquez</div>
+                    <div>Lic. en Análisis de Sistemas</div>
+                    <div>Desarrollador Web</div>
+                </div>
+                <div class="foo-perfil-sociales">
+                    <a href="https://twitter.com/vict_velazquez" target="_blank">
+                        <span class="icon-twitter icono-twitter"></span>
+                    </a>
+                    <a href="https://github.com/victorvelazquez" target="_blank">
+                        <span class="icon-github icono-github"></span>
+                    </a>
+                    <a href="https://www.youtube.com/c/VictorVelazquez-mipc" target="_blank">
+                        <span class="icon-youtube icono-youtube"></span>
+                    </a>
+                    <a href="https://wa.me/595972174652" target="_blank">
+                        <span class="icon-whatsapp icono-whatsapp"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
