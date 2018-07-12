@@ -27,7 +27,7 @@
         <nav>
             <h1 class="nav-titulo">Angular</h1>
             <div class="nav-img">
-                <img src="img/angular.png" alt="TypeScript">
+                <img src="img/angular/angular.png" alt="TypeScript">
             </div>
             <ul>
                 <a href="#1">
@@ -40,7 +40,7 @@
                     <li>3. Aplicación web SPA</li>
                 </a>
                 <a href="#4">
-                    <li>4. Entorno de desarrollo</li>
+                    <li>4. Angular CLI</li>
                 </a>
                 <a href="#5">
                     <li>5. Crea un nuevo proyecto</li>
@@ -51,6 +51,9 @@
                 <a href="#7">
                     <li>7. Archivos y carpetas</li>
                 </a>
+                <a href="#8">
+                    <li>8. Data Binding</li>
+                </a>
 
                 
 
@@ -60,7 +63,7 @@
             <div class="seccion">
                 <br>
                 <div class="seccion-img">
-                    <img src="img/angular.png" alt="Angular">
+                    <img src="img/angular/angular.png" alt="Angular">
                 </div>
                 
                 <h2 id="1">1. ¿Qué es Angular?</h2>
@@ -88,7 +91,7 @@
                 <p>Es decir las aplicaciones web que podemos hacer con Angular son reactivas y no recargan el navegador, todo es muy dinámico
                 y asíncrono con ajax.</p>
 
-                <h2 id="4">4. Entorno de desarrollo</h2>
+                <h2 id="4">4. Angular CLI</h2>
                 <p>Necesita configurar su entorno de desarrollo antes de poder hacer cualquier cosa.</p>
                 <p>Instale Node.js® y npm si aún no están en su máquina.</p>
                 <p>Verifique que esté ejecutando al menos Node.js versión 8.x o superior y npm versión 5.x o superior ejecutando node -v y npm
@@ -96,6 +99,9 @@
                 bien.</p>
                 <p>Luego, instale Angular CLI globalmente.</p>
                 <div class="terminal">npm install -g @angular/cli</div>
+                <p>Angular CLI es la forma más cómoda para empezar a desarrollar aplicaciones web, móvil con Angular, es una herramienta de
+                linea de comandos que facilita la creación, generación, ejecución, testing, deploy. Lo genial es que es parte de los proyectos
+                oficiales de la gente que hace Angular.</p>
 
                 <h2 id="5">5. Crea un nuevo proyecto</h2>
                 <p>Genere un nuevo proyecto y una aplicación predeterminada ejecutando el siguiente comando en la terminal:</p>
@@ -111,14 +117,13 @@
                 </div>
                 <p>El comando ng serve inicia el servidor, mira tus archivos y reconstruye la aplicación a medida que realizas cambios en esos
                 archivos.</p>
-                <p>El uso de la opción --open (o solo -o) abrirá automáticamente su navegador en http: // localhost: 4200 /.</p>
+                <p>El uso de la opción --open (o solo -o) abrirá automáticamente su navegador en http://localhost:4200/</p>
                 <p>Tu aplicación te saluda con un mensaje:</p>
                 <div>
-                    <img class="sombra" style="max-width: 297px; display: block; margin: 0 auto;" src="img/angular-welcome.png" alt="Angular">
+                    <img class="sombra" style="max-width: 297px; display: block; margin: 0 auto;" src="img/angular/angular-welcome.png" alt="Angular">
                 </div>
 
-                <h2 id="7">7. Archivos y carpetas</h2>
-                
+                <h2 id="7">7. Archivos y carpetas</h2>  
                 <p><strong>Carpeta src</strong>
                     <br> Tu aplicación vive en la carpeta src. Todos los componentes angulares, plantillas, estilos, imágenes y cualquier
                     otra cosa que necesite su aplicación van aquí. Cualquier archivo fuera de esta carpeta está destinado a ayudar
@@ -271,6 +276,84 @@
                 <p>Ese "app-root" es el componente raíz de la aplicación. En el desarrollo basado en componentes es un patrón normal que toda
                 la aplicación se construya en un componente principal, del que colgará todo un árbol de componentes especializados en hacer
                 cada una de las cosas necesarias.</p>
+
+                <h2 id="8">8. Data Binding</h2>
+                <p>Es un proceso que crea una conexión entre la interfaz de usuario de la aplicación y los datos. Cuando los datos cambian su
+                valor, los elementos de la UI que están vinculados a los datos, también cambiarán. Angular maneja el enlace de datos sincronizando 
+                el estado de la vista con los datos en el componente.</p>
+                <p>El Data Binding puede ser unidireccional, donde un cambio en el estado afecta la vista, o bidireccional, donde un cambio desde la vista también
+                puede cambiar el modelo.</p>
+                <p>Angular admite los siguientes tipos de binding:</p>
+                <ul>
+                    <li>String Interpolation {{}} <strong> TypeScript => HTML</strong></li>
+                    <li>Property Binding [] <strong> TypeScript <= HTML</strong></li>
+                    <li>Event Binding () <strong> TypeScript <= HTML</strong></li>
+                    <li>Two Way Data Binding [()] <strong> TypeScript <=> HTML</strong></li>
+                </ul>
+                <h3>Ejemplo de String Interpolation</h3>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/interpolation-1.png" alt="Interpolation">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/interpolation-2.png" alt="Interpolation">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/interpolation-3.png" alt="Interpolation">
+                </div>
+                <h3>Ejemplo de Property Binding</h3>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/property-binding-1.png" alt="Property Binding">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/property-binding-2.png" alt="Property Binding">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/property-binding-3.png" alt="Property Binding">
+                </div>
+                <h3>Ejemplo de Event Binding</h3>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/event-binding-1.png" alt="Event Binding">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/event-binding-2.png" alt="Event Binding">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/event-binding-3.png" alt="Event Binding">
+                </div>
+                <h3>Ejemplo de Two Way Data Binding</h3>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/two-way-data-binding-1.png" alt="Two Way Data Binding">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/two-way-data-binding-2.png" alt="Two Way Data Binding">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/two-way-data-binding-3.png" alt="Two Way Data Binding">
+                </div>
+                <br>
+                <div>
+                    <img class="sombra" style="max-width: 500px; display: block; margin: 0 auto;" src="img/angular/two-way-data-binding-4.png" alt="Two Way Data Binding">
+                </div>
+                
+
+
+
+
+
+                
+
+                
+
+
+
                         
                 
 
